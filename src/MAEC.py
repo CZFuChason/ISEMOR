@@ -178,7 +178,7 @@ class MAEC():
                 gends = tra_gends[idx]
                 
                 latent_fake = self.encoder.predict([target_ipt, intlr_ipt, selfpre_ipt])
-                latent_real = np.random.normal(size=(batch_size, self.latent_dim))
+                latent_real = np.random.normal(loc=1, scale=0.3, size=(batch_size, self.latent_dim))
 #               ISO-MAEC                
 #                 latent_real = np.concatenate([np.random.normal(loc=0, scale=0.3, size=(int(batch_size/4), 2048)),
 #                              np.random.normal(loc=1, scale=0.3,size=(int(batch_size/4), 2048)),
