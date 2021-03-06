@@ -185,7 +185,7 @@ class MAEC():
 #                              np.random.normal(loc=2, scale=0.3,size=(int(batch_size/4), 2048)),
 #                              np.random.normal(loc=3, scale=0.3,size=(int(batch_size/4), 2048)),
 #                             ], axis=0)
-                
+                #  random.shuffle(latent_real)
                 d_loss_real = self.discriminator.train_on_batch(latent_real, valid)
                 d_loss_fake = self.discriminator.train_on_batch(latent_fake, fake)
                 d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
