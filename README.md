@@ -1,6 +1,8 @@
-# MAEC
+# MAEC & ISO-MAEC
 
-After extracting features with opensmile toolkit, we used following function to re-align features
+Data preprocessing: follow the [opensmile document](https://audeering.github.io/opensmile/get-started.html#extracting-features-for-emotion-recognition)
+
+After extracting features with opensmile toolkit, use following function to re-align features
 
     def getFeature(File_path):
         File = open(File_path,"r")
@@ -35,5 +37,11 @@ After extracting features with opensmile toolkit, we used following function to 
         return All_Feature
     
     
+Put the pickled features to 'data' folder.
+or you can directly download and unzip our [preprocessed data](https://drive.google.com/file/d/1SjfmzuZEzzd0pVM-_zR03id1UX8aVqbp/view?usp=sharing)
+ 
+To start training, simply run
+
+    python train.py
     
 Since the model involving the adversarial traing, you may be patient to train the model serveral times to get the best result.
