@@ -6,7 +6,6 @@ from tensorflow.keras.preprocessing import sequence
 
 
 def six2four(labels):
-    #['hap', 'sad', 'neu', 'ang', 'exc', 'fru']
     labels_d = {0:0, 1:1, 2:2, 3:3, 4:0, 5:2}
     new_labels = []
     for l in labels:
