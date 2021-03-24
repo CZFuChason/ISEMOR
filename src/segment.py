@@ -36,12 +36,12 @@ def multi_instances(samples, width, stride):
 
 def get_data():
     
-    tra_smls = pkl.load(open('../data/tra_smls.p', 'rb'))[:-10]
-    tra_intlter = pkl.load(open('../data/tra_intlter.p', 'rb'))[:-10]
-    tra_pre_self = pkl.load(open('../data/tra_pre_self.p', 'rb'))[:-10]
+    tra_smls = pkl.load(open('../data/tra_smls.p', 'rb'))
+    tra_intlter = pkl.load(open('../data/tra_intlter.p', 'rb'))
+    tra_pre_self = pkl.load(open('../data/tra_pre_self.p', 'rb'))
 
-    tra_emos = pkl.load(open('../data/tra_emos.p', 'rb'))[:-10]
-    tra_gends = pkl.load(open('../data/tra_gends.p', 'rb'))[:-10]
+    tra_emos = pkl.load(open('../data/tra_emos.p', 'rb'))
+    tra_gends = pkl.load(open('../data/tra_gends.p', 'rb'))
 
 
     tes_smls = pkl.load(open('../data/tes_smls.p', 'rb'))
