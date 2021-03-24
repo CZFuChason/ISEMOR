@@ -5,14 +5,6 @@ from tensorflow.keras.preprocessing import sequence
 
 
 
-def six2four(labels):
-    labels_d = {0:0, 1:1, 2:2, 3:3, 4:0, 5:2}
-    new_labels = []
-    for l in labels:
-        new_labels.append(labels_d[l.argmax()])
-    return to_categorical(new_labels)
-
-
 def multi_instances(samples, width, stride):
     mi_samples = []
     l = len(samples)
