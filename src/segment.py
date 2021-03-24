@@ -62,13 +62,15 @@ def get_data():
     mi_tes_intlter_ = multi_instances(tes_intlter, w, stride)
     mi_tes_pre_self_ = multi_instances(tes_pre_self, w, stride)
     
-    tra_emos_ = six2four(tra_emos)
-    tes_emos_ = six2four(tes_emos)
+#     tra_emos_ = six2four(tra_emos)
+#     tes_emos_ = six2four(tes_emos)
     tra_gends_ = tra_gends
     tes_gends_ = tes_gends
     
-    return [mi_tra_specs_, mi_tra_intlter_, mi_tra_pre_self_, tra_emos_, tra_gends_,
-            mi_tes_specs_, mi_tes_intlter_, mi_tes_pre_self_, tes_emos_, tes_gends_]
+#     return [mi_tra_specs_, mi_tra_intlter_, mi_tra_pre_self_, tra_emos_, tra_gends_,
+#             mi_tes_specs_, mi_tes_intlter_, mi_tes_pre_self_, tes_emos_, tes_gends_]
+    return [mi_tra_specs_, mi_tra_intlter_, mi_tra_pre_self_, tra_emos, tra_gends_,
+            mi_tes_specs_, mi_tes_intlter_, mi_tes_pre_self_, tes_emos, tes_gends_]
 
 
 
