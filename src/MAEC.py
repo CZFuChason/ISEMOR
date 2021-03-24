@@ -10,7 +10,7 @@ from tensorflow.keras.models import Sequential, Model, load_model
 from tensorflow.keras.layers import Input, Dense, GRU, Layer, Attention, LeakyReLU, Reshape, Softmax, Dropout, Conv1D, Concatenate, GlobalAveragePooling1D, MaxPooling1D, LeakyReLU, Flatten, multiply, Activation, Add, BatchNormalization, Bidirectional, TimeDistributed
 import tensorflow.keras.backend as K
 import pickle as pkl
-
+import random
 from sklearn.metrics import classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sn
@@ -163,7 +163,7 @@ class MAEC():
 
         for epoch in range(epochs):
             print('---- epoch %d ----'%(epoch))
-            iters = int(len(tra_specs)/batch_size)
+            iters = int(len(mi_tra_specs)/batch_size)
 #             iters = 10
             valid = np.ones((batch_size, 1))
             fake = np.zeros((batch_size, 1))
@@ -185,7 +185,7 @@ class MAEC():
                              np.random.normal(loc=2, scale=0.3,size=(int(batch_size/4), 2048)),
                              np.random.normal(loc=3, scale=0.3,size=(int(batch_size/4), 2048)),
                             ], axis=0)
-                 random.shuffle(latent_real)
+                random.shuffle(latent_real)
                 d_loss_real = self.discriminator.train_on_batch(latent_real, valid)
                 d_loss_fake = self.discriminator.train_on_batch(latent_fake, fake)
                 d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
@@ -230,7 +230,7 @@ class MAEC():
                 print("acc improved from %.4f to %.4f"%(acc_cla_max, acc_cla))
                 print("--------------------")
                 acc_cla_max = acc_cla
-                save_model(self.aec, model_file)
+#                 save_model(self.aec, model_file)
                 
                 report_filename = file_path_root+'cla.txt'
                 with open(report_filename, 'w', encoding='utf-8') as f:
