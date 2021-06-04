@@ -178,14 +178,14 @@ class MAEC():
                 gends = tra_gends[idx]
                 
                 latent_fake = self.encoder.predict([target_ipt, intlr_ipt, selfpre_ipt])
-#                 latent_real = np.random.normal(loc=1, scale=0.3, size=(batch_size, self.latent_dim))
+                latent_real = np.random.normal(loc=1, scale=0.3, size=(batch_size, self.latent_dim))
 #               ISO-MAEC                
-                latent_real = np.concatenate([np.random.normal(loc=0, scale=0.3, size=(int(batch_size/4), 2048)),
-                             np.random.normal(loc=1, scale=0.3,size=(int(batch_size/4), 2048)),
-                             np.random.normal(loc=2, scale=0.3,size=(int(batch_size/4), 2048)),
-                             np.random.normal(loc=3, scale=0.3,size=(int(batch_size/4), 2048)),
-                            ], axis=0)
-                random.shuffle(latent_real)
+#                 latent_real = np.concatenate([np.random.normal(loc=0, scale=0.3, size=(int(batch_size/4), 2048)),
+#                              np.random.normal(loc=1, scale=0.3,size=(int(batch_size/4), 2048)),
+#                              np.random.normal(loc=2, scale=0.3,size=(int(batch_size/4), 2048)),
+#                              np.random.normal(loc=3, scale=0.3,size=(int(batch_size/4), 2048)),
+#                             ], axis=0)
+#                 random.shuffle(latent_real)
                 d_loss_real = self.discriminator.train_on_batch(latent_real, valid)
                 d_loss_fake = self.discriminator.train_on_batch(latent_fake, fake)
                 d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
