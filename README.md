@@ -38,8 +38,6 @@ After extracting features with opensmile toolkit, use following function to re-a
     
     
 Put the pickled features to 'data' folder.
-or you can directly download and unzip our [preprocessed data (leave-one-session-out)]
-(available soon)
  
 To start training, simply run
 
