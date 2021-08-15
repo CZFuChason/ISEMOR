@@ -41,6 +41,7 @@ Given the features, we randomly selected 20% samples of training set for random 
 For your convinient, you can download the dataset fron here (available soon)
 
 Then, split the data for training and testing set (leave-one-session-out):
+    
     python get_loso.py (will be uploaded later)
 
 Put the pickled features to 'data' folder.
