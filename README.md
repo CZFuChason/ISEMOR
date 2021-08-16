@@ -38,7 +38,7 @@ After extracting features with opensmile toolkit, use following function to re-a
     
 Given the features, we randomly selected 20% samples of training set for random masking with numpy.random.uniform() function.
 
-For your convinient, you can download the dataset fron here (available soon)
+For your convinient, you can download the dataset from here (available soon)
 
 Then, split the data for training and testing set (leave-one-session-out):
     
