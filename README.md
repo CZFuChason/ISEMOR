@@ -51,3 +51,7 @@ To start training, simply run
     python train.py
     
 Since the model involves the adversarial traing, you may have to be patient to train the model serveral times to get the best result.
+
+
+## Konwn issues
+will be given soon
