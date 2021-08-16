@@ -159,11 +159,11 @@ class MAEC():
         acc_cla_max = 0.0
         
         file_path_root = './results/'
-        model_file = file_path_root+'aec'
+        model_file = file_path_root+'model'
 
         for epoch in range(epochs):
             print('---- epoch %d ----'%(epoch))
-            iters = int(len(mi_tra_specs)/batch_size)
+            iters = int(len(mi_tra_specs)/batch_size) # you may try smaller number
 #             iters = 10
             valid = np.ones((batch_size, 1))
             fake = np.zeros((batch_size, 1))
