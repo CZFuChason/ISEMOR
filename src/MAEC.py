@@ -165,6 +165,7 @@ class MAEC():
             print('---- epoch %d ----'%(epoch))
             iters = int(len(mi_tra_specs)/batch_size) # you may try smaller number
 #             iters = 10
+#             iters = 128
             valid = np.ones((batch_size, 1))
             fake = np.zeros((batch_size, 1))
             
