@@ -38,13 +38,9 @@ After extracting features with opensmile toolkit, use following function to re-a
     
 Given the features, we randomly selected 20% samples of training set for random masking with numpy.random.uniform() function.
 
-For your convinient, you can download the dataset from here (available soon)
+For your convinient, you can download the dataset from [here](https://drive.google.com/file/d/1m20usDC0xmkqCkHEm3THL-DfxMDPt86s/view?usp=sharing)
 
-Then, split the data for training and testing set (leave-one-session-out):
-    
-    python get_loso.py (will be uploaded later)
-
-Put the pickled features to 'data' folder.
+Then, unzip the dataset for training and testing set (leave-one-session-out) to data folder
  
 To start training, simply run
 
@@ -55,6 +51,4 @@ Since the model involves the adversarial traing, you may have to be patient to t
 
 ## Konwn issues
 1. This demo code does not contain early stop fucntion, you need to write the function by yourself.
-
-
-will be given soon
+2. updating
